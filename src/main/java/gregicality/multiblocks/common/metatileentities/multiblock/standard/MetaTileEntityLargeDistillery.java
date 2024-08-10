@@ -265,6 +265,7 @@ public class MetaTileEntityLargeDistillery extends GCYMRecipeMapMultiblockContro
 
         @Override
         protected IMultipleTankHandler getOutputTank() {
+            if (!usesAdvHatchLogic()) return super.getOutputTank();
             return handler.getFluidTanks();
         }
     }
